@@ -1,4 +1,4 @@
-PANDS Project
+PANDS
 
 https://stackoverflow.com/questions/67946868/how-do-i-install-pandas-into-visual-studios-code
 https://stackoverflow.com/questions/54129321/installed-pandas-but-still-cant-import-it
@@ -13,12 +13,3 @@ https://thispointer.com/pandas-get-sum-of-column-values-in-a-dataframe/
 https://www.geeksforgeeks.org/python-pandas-dataframe-std/?ref=lbp
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.median.html
 https://erikrood.com/Python_References/pandas_column_average_median_final.html
-
-https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
-https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html
-https://www.programiz.com/python-programming/writing-csv-files
-https://stackoverflow.com/questions/41910583/errno-13-permission-denied-python
-https://stackoverflow.com/questions/39282516/python-list-to-csv-throws-error-iterable-expected-not-numpy-int64
-https://www.adamsmith.haus/python/answers/how-to-add-a-column-to-a-csv-file-in-python
-https://docs.python.org/3/library/csv.html
-https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-blank-lines-between-each-row
