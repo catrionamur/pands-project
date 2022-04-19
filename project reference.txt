@@ -22,3 +22,8 @@ https://stackoverflow.com/questions/39282516/python-list-to-csv-throws-error-ite
 https://www.adamsmith.haus/python/answers/how-to-add-a-column-to-a-csv-file-in-python
 https://docs.python.org/3/library/csv.html
 https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-blank-lines-between-each-row
+
+07/04
+
+https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+https://akshay-a.medium.com/descriptive-statistics-with-pandas-on-iris-data-beginner-bbc4422597ea
