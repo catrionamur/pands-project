@@ -27,3 +27,13 @@ https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-bla
 
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://akshay-a.medium.com/descriptive-statistics-with-pandas-on-iris-data-beginner-bbc4422597ea
+
+19/04
+https://mode.com/example-gallery/python_histogram/#:~:text=To%20create%20a%20histogram%2C%20we%20will%20use%20pandas,visualizing%20data%2C%20you%20want%20to%20highlight%20specific%20variables.
+https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
+https://medium.com/analytics-vidhya/first-step-to-statistics-with-iris-data-3d29c0820c5d
+https://notepub.io/notes/programming-languages/python-for-data-science/python-for-data-science-exploratory-data-analysis-iris-dataset/
+https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-with-kaggle-kernels-part-1/#:~:text=One%20way%20to%20get%20this%20information%20is%20to,Counting%20the%20number%20of%20samples%20for%20each%20classification.
+https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+
+

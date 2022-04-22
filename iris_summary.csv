@@ -1,2 +1,5 @@
-Sepal Length sum,Sepal Length Median,Sepal Length Mean,Sepal Length standard deviation,Sepal Length Max,Sepal Length Min
-876.5,5.8,5.84,0.83,7.9,4.3
+,Total,Mean,Standard Deviation,Max,Min,First Quartile,Median,Third Quartile,IQR
+Sepal Length,876.5,5.84,0.83,7.9,4.3,5.1,5.8,6.4,1.3
+Sepal Width,458.1,3.05,0.43,4.4,2.0,2.8,3.0,3.3,0.5
+Petal Length,563.8,3.76,1.76,6.9,1.0,1.6,4.35,5.1,3.5
+Petal Width,179.8,1.2,0.76,2.5,0.1,0.3,1.3,1.8,1.5
