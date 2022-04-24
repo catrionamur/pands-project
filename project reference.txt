@@ -53,3 +53,5 @@ https://www.statology.org/seaborn-title/
 https://www.marsja.se/how-to-change-size-of-seaborn-plot/
 https://stackabuse.com/matplotlib-change-scatter-plot-marker-size/
 https://www.tutorialspoint.com/how-to-save-a-histogram-plot-in-python#:~:text=Set%20the%20figure%20size%20and%20adjust%20the%20padding,method.%20To%20save%20the%20histogram%2C%20use%20plt.savefig%20%28%27image_name%27%29.
+https://www.statology.org/matplotlib-show-grid/#:~:text=To%20add%20gridlines%20to%20the%20plot%2C%20we%20can,plt.grid%28True%29%20plt.show%28%29%20Add%20Gridlines%20to%20Only%20One%20Axis
+https://medium.com/eda-iris-dataset/exploratory-data-analysis-eda-on-iris-data-set-by-python-fbaae921654a
