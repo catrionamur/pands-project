@@ -1,5 +1,7 @@
 #from statistics import median
+from lib2to3.pgen2.pgen import DFAState
 from tkinter import N, W
+from turtle import title
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -129,7 +131,8 @@ plt.hist(x, bins = 20, color = "green")
 plt.title("Sepal Length in cm")
 plt.xlabel("Sepal_Length_cm")
 plt.ylabel("Count")
-#plt.show()
+plt.savefig('histSepalLength.png')
+plt.show()
 
 plt.figure(figsize = (10, 7))
 x = df["sepal_width"]
@@ -137,6 +140,9 @@ plt.hist(x, bins = 20, color = "red")
 plt.title("Sepal Width in cm")
 plt.xlabel("Sepal_Width_cm")
 plt.ylabel("Count")
+plt.savefig('histSepalWidth.png')
+plt.show()
+
 
 plt.figure(figsize = (10, 7))
 x = df["petal_length"]
@@ -144,7 +150,49 @@ plt.hist(x, bins = 20, color = "blue")
 plt.title("Petal Length in cm")
 plt.xlabel("Petal_Length_cm")
 plt.ylabel("Count")
-  
+plt.savefig('histPetalLength.png')
+plt.show()
+
+plt.figure(figsize = (10, 7))
+x = df["petal_width"]
+plt.hist(x, bins = 20, color = "orange")
+plt.title("Petal Width in cm")
+plt.xlabel("Petal_Width_cm")
+plt.ylabel("Count")
+plt.savefig('histPetalWidth.png')
+plt.show()
+
+sns.countplot(x='Species', data=df,).set(title='Species')
+plt.show()
+
+#scatterplots
+sns.scatterplot(x='sepal_length', y='sepal_width',
+                hue='Species', data=df,).set(title='Sepal Length vs Sepal Width')
+# Placing Legend outside the Figure
+plt.legend(bbox_to_anchor=(1, 1), loc=4)
+fig = plt.gcf()
+fig.set_size_inches(10, 8)
+plt.grid(True)
+plt.show()
+
+sns.scatterplot(x='petal_length', y='petal_width', hue='Species', data=df, ).set(title='Petal Length vs Petal Width')
+# Placing Legend outside the Figure
+plt.legend(bbox_to_anchor=(1, 1), loc=4)
+fig = plt.gcf()
+fig.set_size_inches(10, 8)
+plt.grid(True)
+plt.show()
+
+new_data = df[["sepal_length", "sepal_width", "petal_length", "petal_width"]]
+#print(new_data.head())
+plt.figure(figsize = (10, 7))
+new_data.boxplot()
+plt.grid(True)
+plt.show()
+
+sns.violinplot(x="Species", y="petal_length", data=df, size=8)
 plt.show()
 f.close()
+
+
 

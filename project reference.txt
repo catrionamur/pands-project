@@ -4,7 +4,6 @@ https://stackoverflow.com/questions/67946868/how-do-i-install-pandas-into-visual
 https://stackoverflow.com/questions/54129321/installed-pandas-but-still-cant-import-it
 https://stackoverflow.com/questions/37400974/unicode-error-unicodeescape-codec-cant-decode-bytes-in-position-2-3-trunca
 https://www.javatpoint.com/pandas-sum#:~:text=sum()%20function%20is%20used,the%20values%20in%20each%20column.4
-https://datahub.io/machine-learning/iris#data
 https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 https://towardsdatascience.com/classification-basics-walk-through-with-the-iris-data-set-d46b0331bf82
 https://www.ritchieng.com/machine-learning-iris-dataset/
@@ -13,6 +12,17 @@ https://thispointer.com/pandas-get-sum-of-column-values-in-a-dataframe/
 https://www.geeksforgeeks.org/python-pandas-dataframe-std/?ref=lbp
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.median.html
 https://erikrood.com/Python_References/pandas_column_average_median_final.html
+https://ozzmaker.com/add-colour-to-text-in-python/#:~:text=To%20make%20some%20of%20your%20text%20more%20readable%2C,statement.%201%20print%20%28%22033%20%5B1%3B32%3B40m%20Bright%20Green%20n%22%29
+https://salmaneunus27.github.io/Engineer/2021/03/09/blog-1/
+https://www.c-sharpcorner.com/article/a-first-machine-learning-project-in-python-with-iris-dataset/
+https://www.educba.com/data-manipulation-with-python/
+https://www.codecademy.com/learn/learn-statistics-with-python/modules/quartiles-quantiles-and-interquartile-range/cheatsheet
+https://www.calculatorsoup.com/calculators/statistics/quartile-calculator.php
+https://ozzmaker.com/add-colour-to-text-in-python/#:~:text=To%20make%20some%20of%20your%20text%20more%20readable%2C,statement.%201%20print%20%28%22033%20%5B1%3B32%3B40m%20Bright%20Green%20n%22%29
+
+https://www.blog.pythonlibrary.org/2021/09/07/matplotlib-an-intro-to-creating-graphs-with-python/
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html
+https://datahub.io/machine-learning/iris#data
 
 https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html
@@ -37,3 +47,9 @@ https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-wi
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 
 
+23/04
+https://stackoverflow.com/questions/67946868/how-do-i-install-pandas-into-visual-studios-code
+https://www.statology.org/seaborn-title/
+https://www.marsja.se/how-to-change-size-of-seaborn-plot/
+https://stackabuse.com/matplotlib-change-scatter-plot-marker-size/
+https://www.tutorialspoint.com/how-to-save-a-histogram-plot-in-python#:~:text=Set%20the%20figure%20size%20and%20adjust%20the%20padding,method.%20To%20save%20the%20histogram%2C%20use%20plt.savefig%20%28%27image_name%27%29.
