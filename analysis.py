@@ -146,20 +146,21 @@ plt.grid(True)
 plt.savefig('histPetalWidth.png')
 plt.show()
 
-sns.countplot(x='Species', data=df,).set(title='Species') # Creates a histogram that shows the count of species
-plt.grid(True) # Add grid to chart
+sns.countplot(x='Species', data=df,).set(title='Species Count') # Creates a histogram that shows the number of flowers per species 
 plt.show() #Show the chart
 
 #scatterplots   
 
 sns.scatterplot(x='sepal_length', y='sepal_width',
-                hue='Species', data=df,).set(title='Sepal Length vs Sepal Width')
-# Placing Legend outside the Figure
-plt.legend(bbox_to_anchor=(1, 1), loc=4)
-fig = plt.gcf()
-fig.set_size_inches(10, 8)
-plt.grid(True)
-plt.show()
+                hue='Species', data=df,).set(title='Sepal Length vs Sepal Width') # Create a scatter plot showing distribution of speal length and width of each species
+#Set the tile of the graph to  Sepal Length vs Sepal Width, color is set based on the species
+# Placing Legend outside the Figure 
+plt.legend(bbox_to_anchor=(1, 1), loc=4) # Place legend on the graph, setting where the location is
+fig = plt.gcf() # get the current figure
+fig.set_size_inches(10, 8) # set the size of the current figure
+plt.grid(True) # add drid to the graph
+plt.savefig('scatSepal.png') #save graph as Png
+plt.show() # output graph on screen
 
 sns.scatterplot(x='petal_length', y='petal_width', hue='Species', data=df,).set(title='Petal Length vs Petal Width')
 # Placing Legend outside the Figure
@@ -167,24 +168,39 @@ plt.legend(bbox_to_anchor=(1, 1), loc=4)
 fig = plt.gcf()
 fig.set_size_inches(10, 8)
 plt.grid(True)
+plt.savefig('scatPetal.png') #save graph as Png
 plt.show()
 
-new_data = df[["sepal_length", "sepal_width", "petal_length", "petal_width"]]
-plt.figure(figsize = (10, 7))
-new_data.boxplot()
+fig, axes = plt.subplots(2, 2, figsize=(16,9)) #Box plots shows distribution of Petal width,length and Sepal width and length of each Iris species
+#above sets size of graph and the parameters of where it is located onscreen wgich is either 0 or 1
+sns.boxplot( y="petal_width", x= "Species", data=dataRead, orient='v' , ax=axes[0, 0]) # Uses seaborn library orient = Vertical ax is location of each graph on screen
+sns.boxplot( y="petal_length", x= "Species", data=dataRead, orient='v' , ax=axes[0, 1])
+sns.boxplot( y="sepal_length", x= "Species", data=dataRead, orient='v' , ax=axes[1, 0])
+sns.boxplot( y="sepal_width", x= "Species", data=dataRead, orient='v' , ax=axes[1, 1])
+plt.savefig('boxPlot.png') 
 plt.show()
+
 
 sns.lineplot(data=df, x='petal_length', y='petal_width', hue='Species', dashes=False, marker='o').set(title ="Petal Length vs Petal Width");
 plt.show()
-
 sns.lineplot(data=df, x='sepal_length', y='sepal_width', hue='Species', dashes=False, marker='o').set(title ="Sepal Length vs Sepal Width");
 plt.show()
 
-sns.violinplot(x="Species", y="petal_length", data=df, size=8)
-plt.grid(True)
+fig, axes = plt.subplots(2, 2, figsize=(16,10)) #tViolin Plot shows the density of the length and width of petal and sepal in each species
+sns.violinplot( y="petal_width", x= "Species", data=dataRead, orient='v' , ax=axes[0, 0],inner='quartile')
+sns.violinplot( y="petal_length", x= "Species", data=dataRead, orient='v' , ax=axes[0, 1],inner='quartile')
+sns.violinplot( y="sepal_length", x= "Species", data=dataRead, orient='v' , ax=axes[1, 0],inner='quartile')
+sns.violinplot( y="sepal_width", x= "Species", data=dataRead, orient='v' , ax=axes[1, 1],inner='quartile')
+plt.savefig('violinPlot.png') 
 plt.show()
 
-sns.pairplot(dataRead, hue="Species", palette="husl", markers=["o", "s", "D"])
+
+plt.figure(figsize=(8,10)) # shows the corelation of Petal Width, Petal Length, Sepal Width and sepal length
+sns.heatmap(dataRead.corr(),annot=True)
+plt.plot()
+plt.show()
+
+sns.pairplot(dataRead, hue="Species", palette="husl",height =2, markers=["o", "s", "D"])
 plt.show()
 f.close()
 

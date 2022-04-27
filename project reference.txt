@@ -57,4 +57,6 @@ https://www.statology.org/matplotlib-show-grid/#:~:text=To%20add%20gridlines%20t
 https://medium.com/eda-iris-dataset/exploratory-data-analysis-eda-on-iris-data-set-by-python-fbaae921654a
 
 25/04
-https://uk.search.yahoo.com/search?fr=mcafee&type=E211IE105G0&p=violinplot
+https://towardsdatascience.com/violin-plots-explained-fb1d115e023d
+https://seaborn.pydata.org/generated/seaborn.violinplot.html
+https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/
