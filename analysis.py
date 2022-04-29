@@ -107,7 +107,7 @@ print ("IQR Petal Width: "+str(iqrPetalWdth)+"\n")
 
 plt.figure(figsize = (10, 7)) # Using mathplot lib library functions setting the size of figure  
 x = df["sepal_length"] # Setting the x axis to the sepal length read in from data sets and using the columns that were labelled previously which are used to extract that specific variable data
-plt.hist(x, bins = 20, color = "green") # setting the figure to be a histogram which is based on the x varialble , bins is particular histogran type with intervals, Color assigns the color for that histogram
+plt.hist(x, bins = 20, color = "green") # setting the figure to be a histogram which is based on the x varialble , bins corresponds to number of bars, Color assigns the color for that histogram
 plt.title("Sepal Length in cm")  # set the title of the graph
 plt.xlabel("Sepal_Length_cm") # set the x axis label
 plt.ylabel("Count") # set the axis label
@@ -134,7 +134,7 @@ plt.xlabel("Petal_Length_cm")
 plt.ylabel("Count")
 plt.grid(True)
 plt.savefig('histPetalLength.png')
-plt.show()
+plt.show();
 
 plt.figure(figsize = (10, 7))
 x = df["petal_width"]
@@ -144,10 +144,42 @@ plt.xlabel("Petal_Width_cm")
 plt.ylabel("Count")
 plt.grid(True)
 plt.savefig('histPetalWidth.png')
-plt.show()
+plt.show();
+
+sns.FacetGrid(dataRead, hue="Species", size=5) \
+.map(sns.distplot, "petal_length") \
+.add_legend();
+plt.title("Histogram of petal_length")
+plt.ylabel("Probability Density of petal_length")
+plt.savefig('ProbabilityDensityofpetal_length.png')
+plt.show(); # Used to have histogram and densities in the same plot
+
+sns.FacetGrid(dataRead, hue="Species", size=5) \
+.map(sns.distplot, "petal_width") \
+.add_legend();
+plt.title("Histogram of petal_width")
+plt.ylabel("Probability Density of petal_width")
+plt.savefig('ProbabilityDensityofpetal_width.png')
+plt.show();
+
+sns.FacetGrid(dataRead, hue="Species", size=5) \
+.map(sns.distplot, "sepal_length") \
+.add_legend();
+plt.title("Histogram of sepal_length")
+plt.ylabel("Probability Density of sepal_length")
+plt.savefig('ProbabilityDensityofsepal_length.png')
+plt.show();
+
+sns.FacetGrid(dataRead, hue="Species", size=5) \
+.map(sns.distplot, "sepal_width") \
+.add_legend();
+plt.title("Histogram of sepal_width")
+plt.ylabel("Probability Density of sepal_width")
+plt.savefig('ProbabilityDensityofsepal_width.png')
+plt.show();
 
 sns.countplot(x='Species', data=df,).set(title='Species Count') # Creates a histogram that shows the number of flowers per species 
-plt.show() #Show the chart
+plt.show(); #Show the chart
 
 #scatterplots   
 
@@ -160,7 +192,7 @@ fig = plt.gcf() # get the current figure
 fig.set_size_inches(10, 8) # set the size of the current figure
 plt.grid(True) # add drid to the graph
 plt.savefig('scatSepal.png') #save graph as Png
-plt.show() # output graph on screen
+plt.show(); # output graph on screen
 
 sns.scatterplot(x='petal_length', y='petal_width', hue='Species', data=df,).set(title='Petal Length vs Petal Width')
 # Placing Legend outside the Figure
@@ -169,40 +201,47 @@ fig = plt.gcf()
 fig.set_size_inches(10, 8)
 plt.grid(True)
 plt.savefig('scatPetal.png') #save graph as Png
-plt.show()
+plt.show();
 
 fig, axes = plt.subplots(2, 2, figsize=(16,9)) #Box plots shows distribution of Petal width,length and Sepal width and length of each Iris species
 #above sets size of graph and the parameters of where it is located onscreen wgich is either 0 or 1
+#Boxplot is created to display the summary of the set of data values having properties like minimum, first quartile, median, third quartile and maximum
 sns.boxplot( y="petal_width", x= "Species", data=dataRead, orient='v' , ax=axes[0, 0]) # Uses seaborn library orient = Vertical ax is location of each graph on screen
 sns.boxplot( y="petal_length", x= "Species", data=dataRead, orient='v' , ax=axes[0, 1])
 sns.boxplot( y="sepal_length", x= "Species", data=dataRead, orient='v' , ax=axes[1, 0])
 sns.boxplot( y="sepal_width", x= "Species", data=dataRead, orient='v' , ax=axes[1, 1])
 plt.savefig('boxPlot.png') 
-plt.show()
+plt.show();
 
 
-sns.lineplot(data=df, x='petal_length', y='petal_width', hue='Species', dashes=False, marker='o').set(title ="Petal Length vs Petal Width");
-plt.show()
+sns.lineplot(data=df, x='petal_length', y='petal_width', hue='Species', dashes=False, marker='o').set(title ="Petal Length vs Petal Width"); #Create a line plot, data points are coloured based on species column and its a solid line no dashes
+#marker = o means marker on graph is a circle
+plt.savefig('lineplotPetal.png') 
+plt.show();
 sns.lineplot(data=df, x='sepal_length', y='sepal_width', hue='Species', dashes=False, marker='o').set(title ="Sepal Length vs Sepal Width");
-plt.show()
+plt.savefig('lineplotSepal.png')
+plt.show();
 
-fig, axes = plt.subplots(2, 2, figsize=(16,10)) #tViolin Plot shows the density of the length and width of petal and sepal in each species
-sns.violinplot( y="petal_width", x= "Species", data=dataRead, orient='v' , ax=axes[0, 0],inner='quartile')
+fig, axes = plt.subplots(2, 2, figsize=(16,10)) #Violin Plot shows the density of the length and width of petal and sepal in each species
+sns.violinplot( y="petal_width", x= "Species", data=dataRead, orient='v' , ax=axes[0, 0],inner='quartile') #inner = 'quartile', three lines will be plotted within each violin area for the three middle quartiles
 sns.violinplot( y="petal_length", x= "Species", data=dataRead, orient='v' , ax=axes[0, 1],inner='quartile')
 sns.violinplot( y="sepal_length", x= "Species", data=dataRead, orient='v' , ax=axes[1, 0],inner='quartile')
 sns.violinplot( y="sepal_width", x= "Species", data=dataRead, orient='v' , ax=axes[1, 1],inner='quartile')
 plt.savefig('violinPlot.png') 
-plt.show()
+plt.show();
 
 
-plt.figure(figsize=(8,10)) # shows the corelation of Petal Width, Petal Length, Sepal Width and sepal length
-sns.heatmap(dataRead.corr(),annot=True)
+plt.figure(figsize=(8,10)) #Create a figure of size 8,10
+sns.heatmap(dataRead.corr(),annot=True)  # create a heatmap which shows the corelation of Petal Width, Petal Length, Sepal Width and sepal length
+plt.savefig('HeatMap.png') 
 plt.plot()
-plt.show()
+plt.show();
 
-sns.pairplot(dataRead, hue="Species", palette="husl",height =2, markers=["o", "s", "D"])
-plt.show()
-f.close()
+sns.pairplot(dataRead, hue="Species", palette="husl",height =2, markers=["o", "s", "D"]) # Pair plots are a number of scatterplots that shows you the pairwise relationship between different variables in the Iris dataset.
+#The distribution of each variable is shown as a histogram the rest show as scatterplot which shows the relationship between each pairwise combination of variables
+plt.savefig('pairPlot.png') 
+plt.show() ;
+f.close() #close the file we are writing to
 
 
 
