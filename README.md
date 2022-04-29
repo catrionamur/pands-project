@@ -9,3 +9,4 @@ Scatterplot is used when the visualization data contains only one-dimensional da
 Petal Length for Setosa is fully separated from the other two classes but Versicolor and Virginica are not fully separated they have some overlap of some data points
 Boxplot display the summary of the set of data values having properties like minimum, first quartile, median, third quartile and maximum
 The Scatter plot is the 2D plot the representation of the relationship between two variables.  It has a five-number summary of a set of data. The five-number summary is the minimum, first quartile, median, third quartile, and maximum.
+Pairs plot is a matrix of scatterplots that lets you understand the pairwise relationship between different variables in a dataset.
