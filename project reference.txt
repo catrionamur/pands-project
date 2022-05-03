@@ -18,12 +18,9 @@ https://www.c-sharpcorner.com/article/a-first-machine-learning-project-in-python
 https://www.educba.com/data-manipulation-with-python/
 https://www.codecademy.com/learn/learn-statistics-with-python/modules/quartiles-quantiles-and-interquartile-range/cheatsheet
 https://www.calculatorsoup.com/calculators/statistics/quartile-calculator.php
-https://ozzmaker.com/add-colour-to-text-in-python/#:~:text=To%20make%20some%20of%20your%20text%20more%20readable%2C,statement.%201%20print%20%28%22033%20%5B1%3B32%3B40m%20Bright%20Green%20n%22%29
-
 https://www.blog.pythonlibrary.org/2021/09/07/matplotlib-an-intro-to-creating-graphs-with-python/
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html
 https://datahub.io/machine-learning/iris#data
-
 https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html
 https://www.programiz.com/python-programming/writing-csv-files
@@ -32,9 +29,6 @@ https://stackoverflow.com/questions/39282516/python-list-to-csv-throws-error-ite
 https://www.adamsmith.haus/python/answers/how-to-add-a-column-to-a-csv-file-in-python
 https://docs.python.org/3/library/csv.html
 https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-blank-lines-between-each-row
-
-07/04
-
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://akshay-a.medium.com/descriptive-statistics-with-pandas-on-iris-data-beginner-bbc4422597ea
 https://mode.com/example-gallery/python_histogram/#:~:text=To%20create%20a%20histogram%2C%20we%20will%20use%20pandas,visualizing%20data%2C%20you%20want%20to%20highlight%20specific%20variables.
