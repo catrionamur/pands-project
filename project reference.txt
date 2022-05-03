@@ -37,26 +37,18 @@ https://stackoverflow.com/questions/3348460/csv-file-written-with-python-has-bla
 
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://akshay-a.medium.com/descriptive-statistics-with-pandas-on-iris-data-beginner-bbc4422597ea
-
-19/04
 https://mode.com/example-gallery/python_histogram/#:~:text=To%20create%20a%20histogram%2C%20we%20will%20use%20pandas,visualizing%20data%2C%20you%20want%20to%20highlight%20specific%20variables.
 https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 https://medium.com/analytics-vidhya/first-step-to-statistics-with-iris-data-3d29c0820c5d
 https://notepub.io/notes/programming-languages/python-for-data-science/python-for-data-science-exploratory-data-analysis-iris-dataset/
 https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-with-kaggle-kernels-part-1/#:~:text=One%20way%20to%20get%20this%20information%20is%20to,Counting%20the%20number%20of%20samples%20for%20each%20classification.
 https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
-
-
-23/04
-https://stackoverflow.com/questions/67946868/how-do-i-install-pandas-into-visual-studios-code
 https://www.statology.org/seaborn-title/
 https://www.marsja.se/how-to-change-size-of-seaborn-plot/
 https://stackabuse.com/matplotlib-change-scatter-plot-marker-size/
 https://www.tutorialspoint.com/how-to-save-a-histogram-plot-in-python#:~:text=Set%20the%20figure%20size%20and%20adjust%20the%20padding,method.%20To%20save%20the%20histogram%2C%20use%20plt.savefig%20%28%27image_name%27%29.
 https://www.statology.org/matplotlib-show-grid/#:~:text=To%20add%20gridlines%20to%20the%20plot%2C%20we%20can,plt.grid%28True%29%20plt.show%28%29%20Add%20Gridlines%20to%20Only%20One%20Axis
 https://medium.com/eda-iris-dataset/exploratory-data-analysis-eda-on-iris-data-set-by-python-fbaae921654a
-
-25/04
 https://towardsdatascience.com/violin-plots-explained-fb1d115e023d
 https://seaborn.pydata.org/generated/seaborn.violinplot.html
 https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/
