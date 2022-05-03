@@ -53,10 +53,8 @@ https://towardsdatascience.com/violin-plots-explained-fb1d115e023d
 https://seaborn.pydata.org/generated/seaborn.violinplot.html
 https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/
 https://machinelearningknowledge.ai/seaborn-pairplot-tutorial-for-beginners/#:~:text=The%20hue%20parameter%20helps%20us%20to%20categorize%20data,the%20pairplot%20%28%29%20function.%20In%20%3A%20sns.pairplot%28penguins%2C%20hue%3D%22specie
-
 https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-4df6f045cda
 https://datascienceplus.com/box-plots-identify-outliers/#:~:text=Let%20build%20the%20following%20boxplot%20with%20iris%20dataset,median%2C%20upper%20quartile%20and%20maximum%20value%20of%20Sepal.Length.
-https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/
 https://stackoverflow.com/questions/58350212/matplotlib-hist-smoothing-the-line-between-points-with-step-histogram
 https://machinelearningknowledge.ai/seaborn-pairplot-tutorial-for-beginners/#:~:text=The%20hue%20parameter%20helps%20us%20to%20categorize%20data,the%20pairplot%20%28%29%20function.%20In%20%3A%20sns.pairplot%28penguins%2C%20hue%3D%22species%22%29
