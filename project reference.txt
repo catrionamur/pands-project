@@ -36,7 +36,6 @@ https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
 https://medium.com/analytics-vidhya/first-step-to-statistics-with-iris-data-3d29c0820c5d
 https://notepub.io/notes/programming-languages/python-for-data-science/python-for-data-science-exploratory-data-analysis-iris-dataset/
 https://datacrayon.com/posts/machine-learning/ml-with-kaggle/machine-learning-with-kaggle-kernels-part-1/#:~:text=One%20way%20to%20get%20this%20information%20is%20to,Counting%20the%20number%20of%20samples%20for%20each%20classification.
-https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 https://www.statology.org/seaborn-title/
 https://www.marsja.se/how-to-change-size-of-seaborn-plot/
 https://stackabuse.com/matplotlib-change-scatter-plot-marker-size/
