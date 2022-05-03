@@ -50,4 +50,3 @@ https://datascienceplus.com/box-plots-identify-outliers/#:~:text=Let%20build%20t
 https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/
 https://stackoverflow.com/questions/58350212/matplotlib-hist-smoothing-the-line-between-points-with-step-histogram
 https://machinelearningknowledge.ai/seaborn-pairplot-tutorial-for-beginners/#:~:text=The%20hue%20parameter%20helps%20us%20to%20categorize%20data,the%20pairplot%20%28%29%20function.%20In%20%3A%20sns.pairplot%28penguins%2C%20hue%3D%22species%22%29
-https://seaborn.pydata.org/generated/seaborn.violinplot.html
