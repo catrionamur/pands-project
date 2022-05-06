@@ -4,6 +4,7 @@ import pandas as pd #Import library to allow read in data and manipulation of da
 import seaborn as sns  #Used for analysis of data and graphical representations
 import matplotlib.pyplot as plt #Used for graphs
 import numpy as np #Used for calculations of data
+import statistics # calculating statistics of numeric data
 import csv #file type
 
 dataRead = pd.read_csv(r"C:\Users/Catriona Murray/Documents/pands-project/iris_dataset.csv") # Read in csv file using pandas library functions
@@ -54,137 +55,221 @@ writer.writerow(["Sepal Length",totalSepL,meanSepL,stdSepL,maxSepL,minSepL,q1Sep
 writer.writerow(["Sepal Width",totalSepW,meanSepW,stdSepW,maxSepW,minSepW,q1SepalWdth,medianSepW,q3SepalWdth,iqrSepalWdth]) # write to iris_summary.csv with calculations of sepal width
 writer.writerow(["Petal Length",totalPetL,meanPetL,stdPetL,maxPetL,minPetL,q1PetalLgth,medianPetL,q3PetalLgth,iqrPetalLgth])# write to iris_summary.csv with calculations of petal length
 writer.writerow(["Petal Width",totalPetW,meanPetW,stdPetW,maxPetW,minPetW,q1PetalWdth,medianPetW ,q3PetalWdth,iqrPetalWdth]) # write to iris_summary.csv with calculations of petal width
-# File that is beint written to iris_summary.csv must not be open at the same time as running the script as it will fail with permission errors
+# File that is being written to iris_summary.csv must not be open at the same time as running the script as it will fail with permission errors
 
-
-print ("\033[2;37;40m Sepal Length: \033[0;37;40m") # Output heading so that its underlined
-print ("Sepal Length Standard Deviation: "+str(stdSepL)) # Print out Standard Deviation and all other calculations for each characteristics
-print ("Total Sepal Length: "+str(totalSepL))  
-print ("Mean Sepal Length: "+str(meanSepL))
-print ("Sepal Length Standard Deviation: "+str(stdSepL))
-print ("Max Sepal Length: "+str(maxSepL))
-print ("Min Sepal Length: "+str(minSepL))
-print ("First Quartile Sepal Length: "+str(q1SepalLgth))
-print ("Median Sepal Length: "+str(medianSepL))
-print ("Third Quartile Sepal Length: "+str(q3SepalLgth))
-print ("IQR Sepal Length: "+str(iqrSepalLgth)+"\n")
-
-print ("\033[2;37;40m Sepal Width:\033[0;37;40m")
-print ("Sepal Width Standard Deviation: "+str(stdSepW))
-print ("Total Sepal Width: "+str(totalSepW))
-print ("Mean Sepal Width: "+str(meanSepW))
-print ("Sepal Width Standard Deviation: "+str(stdSepW))
-print ("Max Sepal Width: "+str(maxSepW))
-print ("Min Sepal Length: "+str(minSepW))
-print ("First Quartile Sepal Length: "+str(q1SepalWdth))
-print ("Median Sepal Width: "+str(medianSepW))
-print ("Third Quartile Sepal Length: "+str(q3SepalWdth))
-print ("IQR Sepal Length: "+str(iqrSepalLgth)+"\n")
-
-print ("\033[2;37;40m Petal Length: \033[0;37;40m")
-print ("Petal Length Standard Deviation: "+str(stdPetL))
-print ("Total Petal Length: "+str(totalPetL))
-print ("Mean Petal Length: "+str(meanPetL))
-print ("Petal Length Standard Deviation: "+str(stdPetL))
-print ("Max Petal Length: "+str(maxPetL))
-print ("Min Petal Length: "+str(minPetL))
-print ("First Quartile Petal Length: "+str(q1PetalLgth))
-print ("Median Petal Length: "+str(medianPetL))
-print ("Third Quartile Petal Length: "+str(q3PetalLgth))
-print ("IQR Petal Length: "+str(iqrPetalLgth)+"\n")
-
-print ("\033[2;37;40m Petal Width: \033[0;37;40m")
-print ("Petal Width Standard Deviation: "+str(stdPetW))
-print ("Total Petal Width: "+str(totalPetW))
-print ("Mean Petal Width: "+str(meanPetW))
-print ("Petal Width Standard Deviation: "+str(stdPetW))
-print ("Max Petal Width: "+str(maxPetW))
-print ("Min Petal Width: "+str(minPetW))
-print ("First Quartile Petal Width: "+str(q1PetalWdth))
-print ("Median Petal Width: "+str(medianPetW))
-print ("Third Quartile Petal Length: "+str(q3PetalLgth))
-print ("IQR Petal Width: "+str(iqrPetalWdth)+"\n")
-
+#Ordinary Histogram of sepal length, sepal width, petal length a petal widh
 plt.figure(figsize = (10, 7)) # Using mathplot lib library functions setting the size of figure  
 x = df["sepal_length"] # Setting the x axis to the sepal length read in from data sets and using the columns that were labelled previously which are used to extract that specific variable data
-plt.hist(x, bins = 20, color = "green") # setting the figure to be a histogram which is based on the x varialble , bins corresponds to number of bars, Color assigns the color for that histogram
+plt.hist(x, bins = 20, color = "tomato") # setting the figure to be a histogram which is based on the x varialble , bins corresponds to number of bars, Color assigns the color for that histogram
 plt.title("Sepal Length in cm")  # set the title of the graph
 plt.xlabel("Sepal_Length_cm") # set the x axis label
 plt.ylabel("Count") # set the axis label
 plt.savefig('histSepalLength.png') # Save the graph generated as a png file  in current directory
-plt.grid(True) # put in grid
 plt.show() # Output the graphs to the screen
 
 plt.figure(figsize = (10, 7))
 x = df["sepal_width"]
-plt.hist(x, bins = 20, color = "red")
+plt.hist(x, bins = 20, color = "mediumseagreen")
 plt.title("Sepal Width in cm")
 plt.xlabel("Sepal_Width_cm")
 plt.ylabel("Count")
 plt.savefig('histSepalWidth.png')
-plt.grid(True)
 plt.show()
 
 
 plt.figure(figsize = (10, 7))
 x = df["petal_length"]
-plt.hist(x, bins = 20, color = "blue")
+plt.hist(x, bins = 20, color = "royalblue")
 plt.title("Petal Length in cm")
 plt.xlabel("Petal_Length_cm")
 plt.ylabel("Count")
-plt.grid(True)
 plt.savefig('histPetalLength.png')
 plt.show();
 
 plt.figure(figsize = (10, 7))
 x = df["petal_width"]
-plt.hist(x, bins = 20, color = "orange")
+plt.hist(x, bins = 20, color = "violet")
 plt.title("Petal Width in cm")
 plt.xlabel("Petal_Width_cm")
 plt.ylabel("Count")
-plt.grid(True)
 plt.savefig('histPetalWidth.png')
 plt.show();
 
-sns.FacetGrid(dataRead, hue="Species", size=5) \
-.map(sns.distplot, "petal_length") \
-.add_legend();
-plt.title("Histogram of petal_length")
-plt.ylabel("Probability Density of petal_length")
-plt.savefig('ProbabilityDensityofpetal_length.png')
-plt.show(); # Used to have histogram and densities in the same plot
+#######################################Stacked Histogram ############################################
+colors = ['tomato', 'mediumseagreen', 'royalblue'] #Set colour of graph
 
-sns.FacetGrid(dataRead, hue="Species", size=5) \
-.map(sns.distplot, "petal_width") \
-.add_legend();
-plt.title("Histogram of petal_width")
-plt.ylabel("Probability Density of petal_width")
-plt.savefig('ProbabilityDensityofpetal_width.png')
-plt.show();
+params = {'legend.fontsize': 13 # Set font size and font type
+          , 'font.size': 8
+          , 'font.serif': ['Computer Modern Roman']
+          , 'axes.labelsize': 16
+          , 'xtick.labelsize': 12
+          , 'ytick.labelsize': 12
+         }
+plt.rcParams.update(params) # call parameters function
+iris_setosa = dataRead[df['Species'] == 'setosa'] # set variable as setosa species
+iris_virginica = dataRead[df['Species'] == 'virginica'] # set variable as virginica species
+iris_versicolor = dataRead[df['Species'] == 'versicolor'] # set variable as versicolor species
 
-sns.FacetGrid(dataRead, hue="Species", size=5) \
-.map(sns.distplot, "sepal_length") \
-.add_legend();
-plt.title("Histogram of sepal_length")
-plt.ylabel("Probability Density of sepal_length")
-plt.savefig('ProbabilityDensityofsepal_length.png')
-plt.show();
+#species
+names = ['iris_setosa', 'iris_virginica', 'iris_versicolor']
+plt.hist([iris_setosa["sepal_length"], iris_virginica["sepal_length"], # plot graph for sepal length 
+          iris_versicolor["sepal_length"]],
+          stacked=True, color = colors, label=names,alpha=0.5)  # Create a stacked Histogram to show the Sepal Lemgth of each species
 
-sns.FacetGrid(dataRead, hue="Species", size=5) \
-.map(sns.distplot, "sepal_width") \
-.add_legend();
-plt.title("Histogram of sepal_width")
-plt.ylabel("Probability Density of sepal_width")
-plt.savefig('ProbabilityDensityofsepal_width.png')
-plt.show();
+# Plot formatting
+plt.legend()
+plt.title("Stacked histograms for sepal length",fontsize=15)
+plt.xlabel('Sepal length in cm')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.savefig('stackedHistSepalLength.png')
+plt.show()
 
+
+plt.hist([iris_setosa["sepal_width"], iris_virginica["sepal_width"], 
+          iris_versicolor["sepal_width"]],
+          stacked=True, color = colors, label=names,alpha=0.5)
+plt.legend() 
+plt.title("Stacked histograms for sepal width",fontsize=15)
+plt.xlabel('Sepal width in cm')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.savefig('stackedHistSepalWidth.png')
+plt.show()
+
+plt.hist([iris_setosa["petal_length"], iris_virginica["petal_length"], 
+          iris_versicolor["petal_length"]],
+          stacked=True, color = colors, label=names,alpha=0.5)
+plt.legend() 
+plt.title("Stacked histograms for Petal Length",fontsize=15)
+plt.xlabel('Petal length in cm')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.savefig('stackedHistPetalLength.png')
+plt.show()
+
+plt.hist([iris_setosa["petal_width"], iris_virginica["petal_width"], 
+          iris_versicolor["petal_width"]],
+          stacked=True, color = colors, label=names,alpha=0.5) 
+plt.legend() 
+plt.title("Stacked histograms for Petal width",fontsize=15)
+plt.xlabel('Petal width in cm')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.savefig('stackedHistPetalWidth.png')
+plt.show()
+
+#####################################Histogram by species##########################################
+fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(15,5)) #Plot graph with 3 axes 
+
+ax1.hist(iris_setosa["sepal_length"], 
+          color = 'red', label=names, histtype = 'step') # First axis is Setosa sepal length, histograph should go up in steps
+
+ax2.hist(iris_virginica["sepal_length"] ,          
+          color = 'green', label=names,histtype = 'step') 
+
+ax3.hist(iris_versicolor["sepal_length"],
+          color = 'blue', label=names,histtype = 'step') 
+
+
+ax1.set_title("Iris setosa sepal length",fontsize=18)
+ax2.set_title("Iris virginica sepal length",fontsize=18)
+ax3.set_title("Iris versicolor sepal length",fontsize=18)
+
+# Set common labels
+fig.text(0.0, 0.5,  'Frequency',  ha='center', va='center', rotation='vertical')
+fig.text(0.5, 0.0, 'Sepal lenghts', ha='center', va='center', rotation='horizontal')
+plt.tight_layout()
+plt.savefig('histSepL.png')
+
+plt.show()
+
+####
+
+fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(15,5))
+
+ax1.hist(iris_setosa["sepal_width"], 
+          color = 'red', label=names, histtype = 'step') 
+
+ax2.hist(iris_virginica["sepal_width"] ,          
+          color = 'green', label=names,histtype = 'step') 
+
+ax3.hist(iris_versicolor["sepal_width"],
+          color = 'blue', label=names,histtype = 'step') 
+
+
+ax1.set_title("Iris setosa sepal width",fontsize=18)
+ax2.set_title("Iris virginica sepal width",fontsize=18)
+ax3.set_title("Iris versicolor sepal width",fontsize=18)
+
+# Set common labels
+fig.text(0.0, 0.5,  'Frequency',  ha='center', va='center', rotation='vertical')
+fig.text(0.5, 0.0, 'Sepal Height', ha='center', va='center', rotation='horizontal')
+
+plt.tight_layout()
+plt.savefig('histSepW.png')
+
+plt.show()
+
+#####
+fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(15,5))
+
+ax1.hist(iris_setosa["petal_length"], 
+          color = 'red', label=names, histtype = 'step') 
+
+ax2.hist(iris_virginica["petal_length"] ,          
+          color = 'green', label=names,histtype = 'step') 
+
+ax3.hist(iris_versicolor["petal_length"],
+          color = 'blue', label=names,histtype = 'step') 
+
+
+ax1.set_title("Iris setosa petal length",fontsize=18)
+ax2.set_title("Iris virginica petal length",fontsize=18)
+ax3.set_title("Iris versicolor petal length",fontsize=18)
+
+# Set common labels
+fig.text(0.0, 0.5,  'Frequency',  ha='center', va='center', rotation='vertical')
+fig.text(0.5, 0.0, 'Sepal Height', ha='center', va='center', rotation='horizontal')
+
+plt.tight_layout()
+plt.savefig('histPetL.png')
+plt.show()
+
+#Petal Width by species
+fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(15,5))
+
+ax1.hist(iris_setosa["petal_width"], 
+          color = 'red', label=names, histtype = 'step') 
+
+ax2.hist(iris_virginica["petal_width"] ,          
+          color = 'green', label=names,histtype = 'step') 
+
+ax3.hist(iris_versicolor["petal_width"],
+          color = 'blue', label=names,histtype = 'step') 
+
+
+ax1.set_title("Iris setosa petal width",fontsize=18)
+ax2.set_title("Iris virginica petal width",fontsize=18)
+ax3.set_title("Iris versicolor petal width",fontsize=18)
+
+# Set common labels
+fig.text(0.0, 0.5,  'Frequency',  ha='center', va='center', rotation='vertical')
+fig.text(0.5, 0.0, 'Sepal Height', ha='center', va='center', rotation='horizontal')
+
+plt.tight_layout()
+plt.savefig('histPetW.png')
+plt.show()
+
+
+########################################Species count#################
 sns.countplot(x='Species', data=df,).set(title='Species Count') # Creates a histogram that shows the number of flowers per species 
 plt.show(); #Show the chart
 
-#scatterplots   
+#################################scatterplots########################################################### 
 
 sns.scatterplot(x='sepal_length', y='sepal_width',
-                hue='Species', data=df,).set(title='Sepal Length vs Sepal Width') # Create a scatter plot showing distribution of speal length and width of each species
+                hue='Species', data=df,).set(title='Sepal Length vs Sepal Width') # Create a scatter plot showing distribution of sepal length and width of each species
 #Set the tile of the graph to  Sepal Length vs Sepal Width, color is set based on the species
 # Placing Legend outside the Figure 
 plt.legend(bbox_to_anchor=(1, 1), loc=4) # Place legend on the graph, setting where the location is
