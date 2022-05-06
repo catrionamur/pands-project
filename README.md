@@ -62,3 +62,4 @@ https://machinelearningknowledge.ai/seaborn-pairplot-tutorial-for-beginners/#:~:
 https://datascienceplus.com/box-plots-identify-outliers/#:~:text=Let%20build%20the%20following%20boxplot%20with%20iris%20dataset,median%2C%20upper%20quartile%20and%20maximum%20value%20of%20Sepal.Length.
 https://www.geeksforgeeks.org/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib/
 https://stackoverflow.com/questions/58350212/matplotlib-hist-smoothing-the-line-between-points-with-step-histogram
+https://github.com/NM20XX/First-step-to-Statistics-with-Iris-data-/blob/master/stacked_histogram.py
