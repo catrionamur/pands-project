@@ -1,15 +1,41 @@
 # pands-project
-This script will take in Iris dataset which describes the characteristics of the Iris flowers
-The data sets consists of 3 different types of species of Iris they are Setosa, Versicolour, and Virginica.  The sample size is 151 and includes the features of the flower, which are petal and sepal length and width and of course the class of the flower.  The data set consists of over 50 samples from each of three species of Iri
-The Iris dataset was introduced by the British statistician and biologist Ronald Fishers his 1936 paper and it is widly used ever since 
-The dataset was downloaded from https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
-Histograms are used to show distributions of data in this case we have 4 histograms 
-When using the histogram where densities are included in the same plot, this tells us that the setosa flowers have a petal length between 1 and 1.8. And Versicolor has petal lengths between 3 and 5.2 and Virginica hs petal length between 4.5 and 6.9.
-Scatterplot is used when the visualization data contains only one-dimensional data points, they are suitable to find the relationship between two variables such as sepal length and sepal width.  
-Petal Length for Setosa is fully separated from the other two classes but Versicolor and Virginica are not fully separated they have some overlap of some data points
-Boxplot display the summary of the set of data values having properties like minimum, first quartile, median, third quartile and maximum
-The Scatter plot is the 2D plot the representation of the relationship between two variables.  It has a five-number summary of a set of data. The five-number summary is the minimum, first quartile, median, third quartile, and maximum.
-Pairs plot is a matrix of scatterplots that lets you understand the pairwise relationship between different variables in a dataset.
+The Iris dataset was introduced by the British statistician and biologist Ronald Fishers.  He wrote about it in his 1936 paper and it is now widely used ever since.
+The data records consists of 3 different types of species of Iris they are Setosa, Versicolour, and Virginica.  The iris plant is a flowering plant, researchers measured the characteristics of the iris plant .  The sample size is 150 split evenly between the species.  The data encompasses five columns which are Petal Length, Petal Width, Sepal Length, Sepal Width, and Species Type . 
+The dataset was downloaded from https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/ 
+This script will read in Iris dataset which describes the characteristics of the Iris flowers, calculate the total, median, mean , standard deviation, max, min , Quartile 1 , Quartile 3 an Inter quartile range.  
+The script presents the data through histograms, scatter plots, box plots , line plots, violin plots and pair plot.
+What was found with histograms :
+•	The highest frequency of the sepal length is between 30 and 35 which is between 5.5 and 6
+•	The highest frequency of the sepal Width is around 70 which is between 3.0 and 3.5
+•	The highest frequency of the petal length is around 50 which is between 1 and 2
+•	The highest frequency of the petal width is between 40 and 50 which is between 0.0 and 0.5
+•	The sepal lengths of both Iris Virginica and Iris versicolor are slightly left skewed
+•	In the case of Sepal Length, there is a huge amount of overlapping.
+•	In the case of Sepal Width also, there is a huge amount of overlapping.
+•	In the case of Petal Length, there is a very little amount of overlapping.
+•	In the case of Petal Width also, there is a very little amount of overlapping.
+
+Scatterplot is used when the visualization data contains only one-dimensional data points, they are suitable to find the relationship between two variables such as sepal length vs sepal width and petal length vs petal width .  
+•	Petal Length for Setosa is fully separated from the other two classes but Versicolor and Virginica are not fully separated they have some overlap of some data points
+•	Species Setosa has smaller sepal lengths but larger sepal widths.
+•	Versicolor Species lies in the middle of the other two species in terms of sepal length and width
+•	Species Virginica has larger sepal lengths but smaller sepal widths.
+•	Species Setosa has smaller petal lengths and widths.
+•	Versicolor Species lies in the middle of the other two species in terms of petal length and width
+•	Species Virginica has the largest of petal lengths and widths.
+ Boxplot display the summary of the set of data values.  It shows minimum, first quartile, median, third quartile and maximum 
+•	Species Setosa has the smallest features and less distributed with some outliers.
+•	Species Versicolor has the average features.
+•	Species Virginica has the highest features
+
+The violin plot shows density of the length and width in the species.
+
+ Pairs plot is a matrix of scatterplots that lets you understand the pairwise relationship between different variables in a dataset.
+•	Species Setosa has the smallest of petals widths and lengths. It also has the smallest sepal length but larger sepal widths
+•	Versicolor sepal length is slightly larger than verginica but smaller than Setosa
+•	Versicolor and verginica sepal width are similar sizing 
+•	 Verginica has the largest petal length and width 
+
 
 References
 
